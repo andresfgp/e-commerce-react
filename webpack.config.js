@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // know what folder I am
     filename: 'bundle.js', // create file bundle
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'], // what extension will use
@@ -70,6 +71,7 @@ module.exports = {
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
     compress: true,
     port: 3005,
   },
