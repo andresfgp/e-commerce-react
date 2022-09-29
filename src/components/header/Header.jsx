@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 export const Header = () => {
@@ -6,7 +7,9 @@ export const Header = () => {
     <div className="Header">
       <h1 className="Header-title">PlatziConf Merch</h1>
       <div className="Header-checkout">
-        Checkout
+        <Link to="/checkout">
+          <i className="fas fa-shopping-basket" />
+        </Link>
       </div>
     </div>
   );
