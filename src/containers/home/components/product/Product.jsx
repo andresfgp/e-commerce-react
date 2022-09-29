@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Product({ product }) {
+export const Product = () => {
   return (
     <div className="Products-item">
       <img src={product.image} alt={product.title} />
@@ -18,6 +18,6 @@ function Product({ product }) {
       <button type="button">Comprar</button>
     </div>
   );
-}
+};
 
 export default Product;

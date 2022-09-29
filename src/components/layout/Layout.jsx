@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import './Layout.scss'
+import './Layout.scss';
 
-function Layout({ children }) {
+export const Layout = ({ children }) => {
   return (
     <div className="Main">
       <Header />
@@ -11,6 +11,6 @@ function Layout({ children }) {
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.scss'
+import './Header.scss';
 
-function Header() {
+export const Header = () => {
   return (
     <div className="Header">
       <h1 className="Header-title">PlatziConf Merch</h1>
@@ -10,6 +10,6 @@ function Header() {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

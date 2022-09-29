@@ -1,8 +1,9 @@
 import React from 'react';
 import './Checkout.scss';
 
-function Checkout() {
-  return <div className="Checkout">
+export const Checkout = () => {
+  return (
+    <div className="Checkout">
       <div className="Checkout-content">
         <h3>Lista de Pedidos:</h3>
         <div className="Checkout-item">
@@ -18,6 +19,7 @@ function Checkout() {
         <button type="button">Continuar pedido</button>
       </div>
     </div>
-}
+  );
+};
 
 export default Checkout;

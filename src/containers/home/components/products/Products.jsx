@@ -2,7 +2,7 @@ import React from 'react';
 import Product from '../product/Product';
 import './Products.scss';
 
-function Products({ products }) {
+export const Products = () => {
   return (
     <div className="Products">
       <div className="Products-items">
@@ -12,6 +12,6 @@ function Products({ products }) {
       </div>
     </div>
   );
-}
+};
 
 export default Products;
