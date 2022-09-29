@@ -1,1 +1,7 @@
-{}
+{
+  "projects": {
+    "ecommers": "ecommers-374a7"
+  },
+  "targets": {},
+  "etags": {}
+}
