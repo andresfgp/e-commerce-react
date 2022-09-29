@@ -1,8 +1,8 @@
 import React from 'react';
-import './Footer.scss'
+import './Footer.scss';
 
 const Footer = () => {
-    return (
+  return (
     <div className="Footer">
       <p className="Footer-title">Platzi Conf Merch</p>
       <p className="Footer-copy">Todos los Izquierdos Reservados</p>

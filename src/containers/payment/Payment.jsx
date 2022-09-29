@@ -4,23 +4,23 @@ import { useNavigate } from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 import './Payment.scss';
 import handleSumTotal from '../../helpers/handleSumTotal';
-import config from '../../config/index'
+import config from '../../config/index';
 
 const Payment = () => {
   const { state, addNewOrder } = React.useContext(AppContext);
   const { cart, buyer } = state;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const paypalOtions = {
     clientId: config.clientIdPaypal,
     intent: 'capture',
-    currency: 'USD'
-  }
+    currency: 'USD',
+  };
 
   const buttonStyles = {
     layout: 'vertical',
-    shape: 'rect'
-  }
+    shape: 'rect',
+  };
 
   const handlePaymentSuccess = (data) => {
     console.log(data);
@@ -28,12 +28,12 @@ const Payment = () => {
       const newOrder = {
         buyer,
         product: cart,
-        payment: data
-      }
+        payment: data,
+      };
       addNewOrder(newOrder);
-      navigate('/checkout/success')
+      navigate('/checkout/success');
     }
-  }
+  };
 
   return (
     <div className="Payment">
@@ -43,11 +43,7 @@ const Payment = () => {
           <div className="Payment-item" key={item.title}>
             <div className="Payment-element">
               <h4>{item.title}</h4>
-              <span>
-                $
-                {' '}
-                {item.price}
-              </span>
+              <span>$ {item.price}</span>
             </div>
           </div>
         ))}
@@ -57,9 +53,9 @@ const Payment = () => {
             buttonStyles={buttonStyles}
             amount={handleSumTotal(cart)}
             onPaymentStart={() => console.log('Start Payment')}
-            onSuccess={data => handlePaymentSuccess(data)}
-            onError={error => console.log(error)}
-            onCancel={data => console.log(data)}
+            onSuccess={(data) => handlePaymentSuccess(data)}
+            onError={(error) => console.log(error)}
+            onCancel={(data) => console.log(data)}
           />
         </div>
       </div>

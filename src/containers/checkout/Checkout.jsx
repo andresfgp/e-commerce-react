@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 import './Checkout.scss';
-import handleSumTotal from '../../helpers/handleSumTotal'
+import handleSumTotal from '../../helpers/handleSumTotal';
 
 export const Checkout = () => {
   const { state, removeFromCart } = React.useContext(AppContext);
   const { cart } = state;
 
-  const handleRemove = product => () => {
+  const handleRemove = (product) => () => {
     removeFromCart(product);
   };
 
@@ -20,10 +20,7 @@ export const Checkout = () => {
           <div className="Checkout-item" key={item.title}>
             <div className="Checkout-element">
               <h4>{item.title}</h4>
-              <span>
-                $
-                {item.price}
-              </span>
+              <span>${item.price}</span>
             </div>
             <button type="button" onClick={handleRemove(item)}>
               <i className="fas fa-trash-alt" />

@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // know what folder I am
     filename: 'bundle.js', // create file bundle
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'], // what extension will use
@@ -69,7 +69,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),

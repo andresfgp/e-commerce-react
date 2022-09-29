@@ -4,11 +4,12 @@ import Map from '../../components/map/Map';
 import useGoogleAddress from '../../hooks/useGoogleAddress';
 import './Success.scss';
 
-
 export const Success = () => {
   const { state } = useContext(AppContext);
   const { buyer } = state;
-  const location = useGoogleAddress(buyer===undefined ? 'platzi'  : buyer.address);
+  const location = useGoogleAddress(
+    buyer === undefined ? 'platzi' : buyer.address
+  );
   return (
     <div className="Success">
       <div className="Success-content">

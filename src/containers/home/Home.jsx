@@ -3,9 +3,7 @@ import Products from './components/products/Products';
 import initialState from '../../initialState';
 
 export const Home = () => {
-  return (
-    <Products products={initialState.products} />
-  );
+  return <Products products={initialState.products} />;
 };
 
 export default Home;
