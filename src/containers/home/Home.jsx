@@ -4,7 +4,7 @@ import initialState from '../../initialState';
 import MetaHead from '../../components/meta-head/MetaHead';
 
 export const Home = () => {
-  const title = "E-commerce Store"
+  const title = "E-commerce"
   const description = "Super Store"
   const image = "https://s3.amazonaws.com/gndx.dev/gndxdev.png"
   return (
